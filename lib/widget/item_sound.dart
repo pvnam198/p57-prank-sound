@@ -1,14 +1,13 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:p57_prank_sound/model/sound.dart';
+import 'package:p57_prank_sound/pages/playing_sound_page.dart';
 
 import '../model/sound_package.dart';
-import '../pages/detail_sound_page.dart';
 
-class ItemSoundPackage extends StatelessWidget {
-  final SoundPackage soundPackage;
+class ItemSound extends StatelessWidget {
+  final Sound soundPackage;
 
-  const ItemSoundPackage(this.soundPackage, {Key? key}) : super(key: key);
+  const ItemSound(this.soundPackage, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class ItemSoundPackage extends StatelessWidget {
       child: InkWell(
         onTap: (){
           debugPrint('next screen');
-          Navigator.of(context, rootNavigator: true).pushNamed(DetailSoundPage.routeName, arguments: soundPackage.sounds);
+          Navigator.of(context, rootNavigator: true).pushNamed(PlayingSoundPage.routeName, arguments: soundPackage);
           // Navigator.pushNamed(
           //   context,
           //   '/SecondScreen'
@@ -41,7 +40,7 @@ class ItemSoundPackage extends StatelessWidget {
                         alignment: Alignment.bottomCenter,
                           child: Container(
                               decoration: const BoxDecoration(color: Colors.red),
-                              child: Text(soundPackage.title)),
+                              child: Text(soundPackage.name)),
                       )
                     ],
                   )

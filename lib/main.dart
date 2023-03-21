@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:p57_prank_sound/pages/detail_sound_page.dart';
 import 'package:p57_prank_sound/pages/home_page.dart';
-import 'package:p57_prank_sound/widget/item_sound_package.dart';
+import 'package:p57_prank_sound/pages/playing_sound_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      initialRoute: '/',
+      routes: {
+        DetailSoundPage.routeName: (context) => const DetailSoundPage(),
+        PlayingSoundPage.routeName: (context) => const PlayingSoundPage(),
+        '/': (context) => const HomePage(),
+      },
     );
   }
 }
-

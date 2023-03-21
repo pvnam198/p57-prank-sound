@@ -1,23 +1,24 @@
 import 'package:p57_prank_sound/model/sound_package.dart';
+import 'package:p57_prank_sound/source/sound_source.dart';
 
 class SoundPackageSource {
   static SoundPackage soundPack1 =
-      const SoundPackage(1, 'moon.png', 'moon', 0xFFFEE6B6, 0xFFFFD068);
+      const SoundPackage(1, 'moon.png', 'moon', 0xFFFEE6B6, 0xFFFFD068, SoundSource.sounds1);
 
   static SoundPackage soundPack2 =
-      const SoundPackage(2, 'mushroom.png', 'mushroom', 0xFFC6E9FF, 0xFF6EC8FE);
+      const SoundPackage(2, 'mushroom.png', 'mushroom', 0xFFC6E9FF, 0xFF6EC8FE, SoundSource.sounds1);
 
   static SoundPackage soundPack3 = const SoundPackage(
-      3, 'sunflower.png', 'sunflower', 0xFFFEE6B6, 0xFFFFD068);
+      3, 'sunflower.png', 'sunflower', 0xFFFEE6B6, 0xFFFFD068, SoundSource.sounds1);
 
   static SoundPackage soundPack4 =
-      const SoundPackage(4, 'tulip.png', 'tulip', 0xFFC6E9FF, 0xFF6EC8FE);
+      const SoundPackage(4, 'tulip.png', 'tulip', 0xFFC6E9FF, 0xFF6EC8FE, SoundSource.sounds1);
 
   static SoundPackage soundPack5 =
-      const SoundPackage(5, 'water.png', 'water', 0xFFFEE6B6, 0xFFFFD068);
+      const SoundPackage(5, 'water.png', 'water', 0xFFFEE6B6, 0xFFFFD068, SoundSource.sounds1);
 
   static SoundPackage soundPack6 =
-      const SoundPackage(6, 'sun.png', 'sun', 0xFFC6E9FF, 0xFF6EC8FE);
+      const SoundPackage(6, 'sun.png', 'sun', 0xFFC6E9FF, 0xFF6EC8FE, SoundSource.sounds1);
 
   static final soundsPackages = [
     soundPack1,
