@@ -12,17 +12,12 @@ class PlayingSoundPage extends StatefulWidget {
 }
 
 class _PlayingSoundPage extends State<PlayingSoundPage> {
+  bool isPlaying = false;
+
   @override
   Widget build(BuildContext context) {
     _PlayingSoundPage();
     final args = ModalRoute.of(context)!.settings.arguments as Sound;
-
-    bool isPlaying = false;
-
-    const List<Widget> icons = <Widget>[
-      Icon(Icons.play_arrow),
-      Icon(Icons.pause),
-    ];
 
     return MaterialApp(
       title: 'Flutter layout demo',
